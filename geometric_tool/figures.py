@@ -1,5 +1,6 @@
-from math import pi
 from dataclasses import dataclass
+from math import pi
+
 
 @dataclass
 class Figure:
@@ -19,7 +20,7 @@ class Circle(Figure):
     radius: float
 
     def calculate_area(self):
-        return pi * self.radius ** 2
+        return pi * self.radius**2
 
     def calculate_perimeter(self):
         return 2 * pi * self.radius
@@ -34,7 +35,8 @@ class Triangle(Figure):
 
     def calculate_area(self):
         s = (self.side1 + self.side2 + self.side3) / 2
-        area = (s * (s - self.side1) * (s - self.side2) * (s - self.side3)) ** 0.5
+        area = (s * (s - self.side1) * (s - self.side2) *
+                (s - self.side3))**0.5
         return area
 
     def calculate_perimeter(self):
@@ -53,14 +55,14 @@ class Rectangle(Figure):
     def calculate_perimeter(self):
         return self.side1 * 2 + self.side2 * 2
 
+
 @dataclass
 class Square(Figure):
 
-    side:float
+    side: float
 
     def calculate_area(self):
-        return self.side ** 2
+        return self.side**2
 
     def calculate_perimeter(self):
         return self.side * 4
-
