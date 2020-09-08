@@ -33,7 +33,6 @@ def create():
               prompt="Radius",
               help="Radius of the circle.")
 def circle(name, radius):
-    # figure_list.append(Circle(name, radius))
     figure_dict[name] = Circle(name, radius)
     click.echo(f"{name} created. Circle with radius {radius}")
 
